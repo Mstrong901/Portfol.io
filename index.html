@@ -125,19 +125,31 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="tagline-message">
-                            <h3><em>"Design is intelligence made visible."</em></h3>
-                            <h2 id="authorText">Alina Wheeler</h2>
-                            <hr>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-10">
+                                    <h3>Welcome!<h3>
+                                    <h1 style="color: white; font-size: 20px;">
+                                    <p>My name is Matt Strong, and I am a Software Developer based out of Memphis, TN.</p>
+                                    <p>I specialize in Visual Art, Web Design, and Application Development.</p>
+                                    <p>Below you will find some examples of my work.</p>
+                                </div>
+                                <div class="col-md-1"></div>
+                            </div>
                             <br>
-                            <h3>Welcome!<h3>
-                            <h1 style="color: white; font-size: 25px;">
-                            <p>My name is Matt Strong, and I am a Software Developer based out of Memphis, TN. </p>
-                            <p>I specialize in Visual Art, Web Design, and Application Development. </p>
-                            <p>Below you will find some examples of my work.</p>
-
-
+                            <br>
+                            <div class="col-md-2"></div><div class="col-md-8" id="line" style="margin:4px;background-image: linear-gradient(-45deg, gray, black);height:2px; width:0%;"></div><div class="col-md-2"></div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-1"></div>
+                                <div class="col-md-7">
+                                    <h2><em>"Design is intelligence made visible."</em></h2>
+                                    <h2 style="font-size: 14px;">Alina Wheeler</h2>
+                                </div>
+                                <div class="col-md-4"></div>
+                            </div>
                             </h1>
-                                
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->          
@@ -151,9 +163,6 @@
                     <p>Below are my previous projects, which range from Graphic Design to Full-Stack applications.</p>
                 </div><!-- end title -->
                 <div class="case-top clearfix">
-                    <div class="pull-left hidden-xs">
-                        <p>Showing 1–12 of 24 results</p>
-                    </div><!-- end col -->
                     <div class="pull-right">
                     </div><!-- end col -->
                 </div><!-- end row -->
@@ -344,6 +353,8 @@
                 "fallback_image": "images/dummy.png",   //Fallback image path
                 "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
             });
+
+            $("#line").animate({width: "66%"}, 7500);
         });
     </script>
 
