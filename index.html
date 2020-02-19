@@ -339,7 +339,10 @@
                 "fallback_image": "images/dummy.png",   //Fallback image path
                 "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
             });
-            
+
+            $("#line").animate({width: "100%"}, 1500);
+            $("#visible_animation").animate({opacity:'1.0'},1500);
+            $("#visible_animation").addClass('brighten');
 
         });
 
@@ -350,9 +353,7 @@
         var os2 = $('#message').offset().top;
         var ht2 = $('#message').height();
         if(scroll > os1 + ht1){
-            $("#line").animate({width: "100%"}, 1000);
-            $("#visible_animation").animate({opacity:'1.0'},1000);
-            $("#visible_animation").addClass('brighten');
+
         }
         if(scroll > os2 + ht2){
             $("#profile_pic").animate({opacity: '1.0', height: '150px', width: '150px'}, {duration:5000, complete: function(){
