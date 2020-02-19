@@ -135,9 +135,9 @@ table,th, td {
         <div class="home-text-wrapper relative container">
             <div class="home-message">
                 <!--spacer-->
-                <div class="col-3"></div>
+                <div class="col-md-3"></div>
                 <!--content-->          
-                <div class="col-6">
+                <div class="col-md-6">
 
                     <div id="myDIV" class="header">
                         <h2 style="color: rgba(0, 0, 0, 0.719) ;background-color: rgba(0, 153, 255, 0.404); border-bottom: 2px solid rgba(0, 0, 0, 0.486);">My To Do List</h2>
@@ -149,25 +149,25 @@ table,th, td {
                     </div>
                     <br>
                     <div class="row">
-                        <span class="col-6">Total Activities: <span id="item-count">0</span></span>
-                        <span class="col-6">Activities Left: <span id="unchecked-count">0</span></span>
+                        <span class="col-md-6">Total Activities: <span id="item-count">0</span></span>
+                        <span class="col-md-6">Activities Left: <span id="unchecked-count">0</span></span>
                     </div>
                     <br>
                     <div class="row">
-                        <input id="item" class="col-12" type="text" placeholder="Activity..">
+                        <input id="item" class="col-md-12" type="text" placeholder="Activity..">
                     </div>
                     <br>
                     <div class="row">
-                        <button id="addbtn" class="btn btn-primary col-12">Add Activity</button>
-                        <!-- vanilla <button id="addbtn" class="col-4" onclick="newTodo()">Add Activity</button> -->
+                        <button id="addbtn" class="btn btn-primary col-md-12">Add Activity</button>
+                        <!-- vanilla <button id="addbtn" class="col-md-4" onclick="newTodo()">Add Activity</button> -->
                     </div>
                     <br>
                     <div class="row">
-                        <table style="overflow:auto" class="todo-list"></table>
+                        <table id="todo-list" style="overflow:auto"></table>
                     </div>
                 </div>
                 <!--spacer-->
-                <div class="col-3"></div>
+                <div class="col-md-3"></div>
             </div>
         </div>
     </div>
@@ -252,9 +252,9 @@ table,th, td {
         activity = '<span class="activity_item">' + activity + '</span>';
         var checkbox = '<input type="checkbox" class="check">';
         var deleteButton = '<button class="delete btn-danger"></button>';
-        var tCell1 = '<td class="col-1">' + checkbox + '</td>';
-        var tCell2 = '<td class="class="col-10" style="width:100%">' + activity + '</td>';
-        var tCell3 = '<td class="col-1">'+ deleteButton +'</td>';
+        var tCell1 = '<td class="col-md-1">' + checkbox + '</td>';
+        var tCell2 = '<td class="class="col-md-10" style="width:100%">' + activity + '</td>';
+        var tCell3 = '<td class="col-md-1">'+ deleteButton +'</td>';
         var tCells = tCell1 + tCell2 + tCell3; 
         $('#todo-list').append('<tr>'+(tCells)+'</tr>');        
         checkCounter++;
