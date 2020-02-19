@@ -14,7 +14,12 @@
         text-align: left;
         padding: 0.5rem;
     }
-</style><!doctype html>
+
+    .brighten{
+        color: rgba(255,207,32,1);
+    }
+</style>
+<!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
@@ -346,8 +351,8 @@
         var ht2 = $('#message').height();
         if(scroll > os1 + ht1){
             $("#line").animate({width: "100%"}, 1000);
-            $("#visible_animation").animate({opacity:'1.0'},1500);
-
+            $("#visible_animation").animate({opacity:'1.0'},1000);
+            $("#visible_animation").addClass('brighten');
         }
         if(scroll > os2 + ht2){
             $("#profile_pic").animate({opacity: '1.0', height: '150px', width: '150px'}, {duration:5000, complete: function(){
