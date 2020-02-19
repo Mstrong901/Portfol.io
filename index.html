@@ -1,92 +1,44 @@
 <style>
+    .ed_ex{
+	    vertical-align: top;
+	    text-align: left;
+        font-size: 12px; 
+        width:100%; 
+        color:white; 
+        padding: 5px;
+        border-spacing: 0.5rem;
+    }
 
-.todo-delete {
-  margin: 10px !important;
-}
-
-.todo-checkbox {
-  margin: 10px !important;
-  vertical-align: middle !important;
-}
-
-.btn-danger {
-  border-radius: 2px !important;
-  width: 12px !important;
-  height: 12px !important;
-  padding: 1px !important;
-  vertical-align: middle !important;
-}
-
-.btn-secondary {
-  border-radius: 2px !important;
-  width: 12px !important;
-  height: 12px !important;
-  padding: 1px !important;
-  vertical-align: middle !important;
-}
-
-.list-group-item {
-  color: rgb(0, 117, 172);
-  text-align: left !important;
-}
-
-.todo-container {
-  text-align: left !important;
-  display:block; 
-}
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color:rgb(0, 117, 172);
-  opacity: .5; /* Firefox */
-}
-
-.selected{
-    background-color: rgba(7,130,197,0.1);
-}
-
-table,th, td {
-    border: 1px solid lightgray;
-    border-collapse: collapse;
-    background-color: white;
-}
-
-.activity_item {
-    padding: 15px !important;
-}
-</style>
-<!doctype html>
+    .t_d{
+        vertical-align: top;
+        text-align: left;
+        padding: 0.5rem;
+    }
+</style><!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
 <head>
-
     <!-- Basic -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
     <!-- Mobile Meta -->
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <!-- Site Meta -->
-    <title>Genius</title>
+    <title>Matt Strong | Portfolio</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
-    
     <!-- Site Icons -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
 	<!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> 
-
 	<!-- Custom & Default Styles -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link rel="stylesheet" href="style.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
@@ -98,7 +50,7 @@ table,th, td {
             <div class="vertical-header-wrapper">
                 <nav class="nav-menu">
                     <div class="logo">
-                        <a href="index.html"><img src="images/logo.png" alt=""></a>
+                        <img style="max-height: 50px; max-width: 50px;" src="images/logo.png" alt="">
                     </div><!-- end logo -->
                     <div class="margin-block"></div>
                     <ul class="primary-menu">
@@ -106,9 +58,10 @@ table,th, td {
                         <li class="child-menu"><a href="#">Portfolio <i class="fa fa-angle-right"></i></a>
                             <div class="sub-menu-wrapper">
                                 <ul class="sub-menu center-content">
-                                    <li><a href="https://spacefacemusic.com/" target="blank">Web Design | Spaceface</a></li>
+                                    <li><a href="https://spacefacemusic.com" target="blank" >Web Design | Spaceface</a></li>
                                     <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
                                     <li><a href="todo.html">Application | To Do List </a></li>
+                                    <li><a href="charactersheet.html">Web Form | Character Sheet </a></li>
                                 </ul>
                             </div>
                         </li>
@@ -128,164 +81,291 @@ table,th, td {
             </div><!-- end vertical-header-wrapper -->
         </header><!-- end header -->
     </div><!-- end menu-wrapper -->
-
-<!--Begin To Do-->
-<div id="wrapper">
-    <div id="home" class="video-section js-height-full">
-        <div class="home-text-wrapper relative container">
-            <div class="home-message">
-                <!--spacer-->
-                <div class="col-3"></div>
-                <!--content-->          
-                <div class="col-6">
-
-                    <div id="myDIV" class="header">
-                        <h2 style="color: rgba(0, 0, 0, 0.719) ;background-color: rgba(0, 153, 255, 0.404); border-bottom: 2px solid rgba(0, 0, 0, 0.486);">My To Do List</h2>
-                        <ul style="list-style-type:none;" class="list-group list-group-flush">
-                            <li class="list-group-item">Add an Activity to the To Do List</li>
-                            <li class="list-group-item">You May Click the Checkbox to Mark the Activity as Done</li>
-                            <li class="list-group-item">You May Click the Red Box to Delete the Activity</li>
-                        </ul>
-                    </div>
+    <div id="wrapper">
+        <div id="home" class="video-section">
+            <div class="overlay"></div>
+            <div class="home-text-wrapper relative container">
+                <div class="home-message">
+                    <p id="nameText">Matt Strong</p>
+                    <hr>
+                    <h2 id="portfolioText">Web Design Portfolio</h2>
                     <br>
-                    <div class="row">
-                        <span class="col-6">Total Activities: <span id="item-count">0</span></span>
-                        <span class="col-6">Activities Left: <span id="unchecked-count">0</span></span>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <input id="item" class="col-12" type="text" placeholder="Activity..">
-                    </div>
-                    <br>
-                    <div class="row">
-                        <button id="addbtn" class="btn btn-primary col-12">Add Activity</button>
-                        <!-- vanilla <button id="addbtn" class="col-4" onclick="newTodo()">Add Activity</button> -->
-                    </div>
-                    <br>
-                    <div class="row">
-                        <table id="todo-list"></table>
+                    <div class="btn-wrapper">
+                        <div class="text-center">
+                            <a href="#bio" class="btn btn-primary">Read More</a>
+                        </div>
                     </div>
                 </div>
-                <!--spacer-->
-                <div class="col-3"></div>
             </div>
         </div>
-    </div>
-</div>
+
+        <div class="section bgcolor noover" id="message">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="tagline-message">
+                            <div class="row">
+                                <div class="col-1"></div>
+                                <div class="col-7">
+                                    <h2><em>"Design is intelligence made <a style="opacity: 0.1" id="visible_animation">visible</a>."</em></h2>
+                                    <h2 style="font-size: 14px;">Alina Wheeler</h2>
+                                </div>
+                                <div class="col-4"></div>
+                            </div>
+                            <div class="col-12" id="line" style="margin:4px;background-image: linear-gradient(-45deg, gray, black);height:2px; width:0%;"></div>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->          
+            </div><!-- end container -->
+        </div><!-- end section -->
+
+        <div class="section db" id="bio">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-10" style="border: 4px solid slategray; border-radius: 10px;">
+                                <center><img style="opacity:0.1; width:10px; height:10px;" id="profile_pic" src="images/profile.png" alt="profile"></center>
+                                <div id="bio_text" style="opacity: 0%">
+                                    <h3 style="color:white;"><u>About Me</u><h3>
+                                    <h1 style="color: white; font-size: 20px;">
+                                    <p>My name is Matt Strong, and I am a Software Developer based out of Memphis, TN.</p>
+                                    <p>I specialize in Visual Art, Web Design, and Application Development.</p>
+                                    <p>Below you will find some examples of my work.</p>
+                                    </h1>
+                                </div>
+                            </div>
+                            <div class="col-1"></div>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->          
+            </div><!-- end container -->
+        </div><!-- end section -->
+
+        <section class="section lb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Recent Works</h3>
+                </div><!-- end title -->
+                <div class="case-top clearfix">
+                    <div class="pull-right">
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="portfolio row with-desc">
+                            <div class="post-media pitem item-w1 item-h1 cat1">
+                                <div class="entry">
+                                    <img src="images/spaceface.png" alt="" class="img-responsive">
+                                    <div class="magnifier">
+                                        <a class="golink" href="https://spacefacemusic.com">
+                                           <i class="fa fa-link"></i>
+                                        </a>
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <div class="item-desc">
+                                    <h4><a href="https://spacefacemusic.com" target="blank">Web Design</a></h4>
+                                    <p> Website for Spaceface. </p>
+                                </div>
+                            </div><!-- end post-media -->
+
+                            <div class="post-media pitem item-w1 item-h1 cat2">
+                                <div class="entry">
+                                    <img style="max-height: 600px; max-width: 800px;" src="images/WW.png" alt="" class="img-responsive">
+                                    <div class="magnifier">
+                                        <a class="golink" href="WW.html">
+                                           <i class="fa fa-link"></i>
+                                        </a>
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <div class="item-desc">
+                                    <h4><a href="WW.html">Graphic Design</a></h4>
+                                    <p>Poster design for the Wealthy West. </p>
+                                </div>
+                            </div><!-- end post-media -->
+
+                            <div class="post-media pitem item-w1 item-h1 cat3">
+                                <div class="entry">
+                                    <img src="images/todo.png" alt="" class="img-responsive">
+                                    <div class="magnifier">
+                                        <a class="golink" href="todo.html">
+                                           <i class="fa fa-link"></i>
+                                        </a>
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <div class="item-desc">
+                                    <h4>To Do List Application</a></h4>
+                                    <p>Simple Javascript To Do Application</p>
+                                </div>
+                            </div><!-- end post-media -->
+
+                            <div class="post-media pitem item-w1 item-h1 cat4">
+                                <div class="entry">
+                                    <img src="images/cs.png" alt="">
+                                    <div class="magnifier">
+                                        <a class="golink" href="charactersheet.html">
+                                           <i class="fa fa-link"></i>
+                                        </a>
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <div class="item-desc">
+                                    <h4><a href="#">HTML Form Application</a></h4>
+                                    <p>Extensive Form for Dungeons & Dragons Character Creation</p>
+                                </div>
+                            </div><!-- end post-media --> 
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+        <br><br>
+        <section style="background-color: slategray;">
+            <div class="container">
+		   <br><br>
+                <div class="col-12">
+                    <center><h1 style="color: white;">Education & Experience</h1></center>
+                    <br>
+                    <table class="ed_ex">
+                        <tr style="font-size: 16px;">
+                          <th class="t_d" style="width: 20%;">Education</th>
+                          <th class="t_d" style="width: 10%;">Date</th>
+                          <th class="t_d" style="width: 70%;">Description</th>
+                        </tr>
+                        <tr>
+                          <td class="t_d">LaunchCode</td>
+                          <td class="t_d">2019</td>
+				<td class="t_d"><em>Full Stack Coding Education</em> <br>Instructed in Python, HTML, CSS, JavaScript, jQuery, and SQL.</td>
+                        </tr>
+                        <tr>
+                          <td class="t_d">Tech901</td>
+                          <td class="t_d">2018</td>
+				<td class="t_d"><em>CompTIA A+ Certification</em><br>IT Fundamentals: Hardware, Software, and Security.</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table class="ed_ex">
+                        <tr style="font-size: 16px;">
+                          <th class="t_d" style="width:20%;">Experience</th>
+                          <th class="t_d" style="width:10%;">Date</th>
+                          <th class="t_d" style="width:70%;">Description</th>
+                        </tr>
+                        <tr>
+                          <td class="t_d">Upper Edge Tech</td>
+                          <td class="t_d"> 2019-2020</td>
+				<td class="t_d"><em>Assistant Software Developer</em><br>
+                            Integrate Full-Stack applications to navigate through multiple databases. <br>
+                            Back-End infrastructure utilizing primarily PHP. <br>
+                            Front-End framework using HTML, CSS, JavaScript, jQuery, and Bootstrap. <br>
+                            MsSQL and MySQL databases queried through SQL and Codeigniter.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="t_d">The Flaming Lips</td>
+                          <td class="t_d">2015-2018</td>
+				<td class="t_d"><em>Backline Technician</em><br>
+                            Ensure the working condition and logistics of electronic equipment for an international musical act.
+                        </td>
+                        </tr>
+                    </table>
+			<br><br>
+                </div>
+            </div>
+        </section>
+        <footer class="section footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="widget clearfix">
+                            <div class="newsletter-widget">
+                               
+                                <form class="form-inline" role="search">
+                                    <div class="form-1">
+                                        <p style="color: white;">Contact:</p>
+                                        <input type="text" class="form-control" placeholder="Enter email here..">
+                                        <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane-o"></i></button>
+                                    </div>
+                                </form>
+                            </div><!-- end newsletter -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        <div class="section copyrights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-3">
+                        <div class="cop-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-9 text-right">
+                        <div class="cop-links">
+                            <ul class="list-inline">
+                                <li> 2020  •  Matt Strong</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end wrapper -->
+
+    <!-- jQuery Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/rotate.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/masonry.js"></script>
+    <script src="js/masonry-4-col.js"></script>
+    <!-- VIDEO BG PLUGINS -->
+    <script src="videos/libs/swfobject.js"></script> 
+    <script src="videos/libs/modernizr.video.js"></script> 
+    <script src="videos/libs/video_background.js"></script> 
+    <script>
+        jQuery(document).ready(function($) {
+            var Video_back = new video_background($("#home"), { 
+                "position": "absolute", //Follow page scroll
+                "z-index": "-1",        //Behind everything
+                "loop": true,           //Loop when it reaches the end
+                "autoplay": true,       //Autoplay at start
+                "muted": true,          //Muted at start
+                "mp4":"videos/video.mp4" ,     //Path to video mp4 format
+                "video_ratio": 1.7778,              // width/height -> If none provided sizing of the video is set to adjust
+                "fallback_image": "images/dummy.png",   //Fallback image path
+                "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
+            });
+            $("#line").animate({width: "66%"}, {duration:500, complete: function(){
+                $("#visible_animation").animate({opacity:'1.0'},1500);
+            }
+            });
+
+        });
+
+        $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        var os1 = $('#home').offset().top;
+        var ht1 = $('#home').height();
+        var os2 = $('#message').offset().top;
+        var ht2 = $('#message').height();
+        if(scroll > os1 + ht1){
+            $("#line").animate({width: "66%"}, {duration:1000, complete: function(){
+                $("#visible_animation").animate({opacity:'1.0'},1000);
+            }
+            });
+        }
+        if(scroll > os2 + ht2){
+            $("#profile_pic").animate({opacity: '1.0', height: '150px', width: '150px'}, {duration:5000, complete: function(){
+                $("#bio_text").animate({opacity:'1.0'},2500);
+            }
+            });
+        }
+    });
+    </script>
+
 </body>
 </html>
-
-
-<script>
-/*  Vanilla JavaScript -- Does Not Look Great
-  const itemInput = document.getElementById("item");
-  const list = document.getElementById("todo-list");
-  const itemCountSpan = document.getElementById("item-count");
-  const uncheckedCountSpan = document.getElementById("unchecked-count");
-  
-  function newTodo() {
-    let myItem = itemInput.value;
-  
-    const todoItem = document.createElement("li");
-    todoItem.setAttribute("class", "todo-container");
-  
-    const todoText = document.createElement("span");
-    todoText.setAttribute("class", " todo-text");
-  
-    const todoCheck = document.createElement("input");
-    todoCheck.setAttribute("type", "checkbox");
-    todoCheck.setAttribute("class", "float-left todo-checkbox");
-  
-    const todoDelete = document.createElement("button");
-    todoDelete.setAttribute("class", "btn btn-danger btn-sm todo-delete");
-  
-    todoItem.appendChild(todoCheck);
-    todoItem.appendChild(todoText);
-    todoItem.appendChild(todoDelete);
-    todoText.textContent = myItem;
-  
-    list.appendChild(todoItem);
-  
-    let checkCount = uncheckedCountSpan.innerHTML;
-    checkCount = Number(checkCount) + 1;
-    uncheckedCountSpan.innerHTML = checkCount;
-  
-    let itemCount = itemCountSpan.innerHTML;
-    itemCount = Number(itemCount) + 1;
-    itemCountSpan.innerHTML = itemCount;
-  
-    todoCheck.addEventListener("change", function() {
-      if (todoCheck.checked) {
-        let checkCount = uncheckedCountSpan.innerHTML;
-        checkCount = Number(checkCount) - 1;
-        uncheckedCountSpan.innerHTML = checkCount;
-      } else {
-        let checkCount = uncheckedCountSpan.innerHTML;
-        checkCount = Number(checkCount) + 1;
-        uncheckedCountSpan.innerHTML = checkCount;
-      }
-    });
-  
-    todoDelete.addEventListener("click", function() {
-      if(todoCheck.checked !== true) {
-        let checkCount = uncheckedCountSpan.innerHTML;
-          checkCount = Number(checkCount) - 1;
-          uncheckedCountSpan.innerHTML = checkCount;
-      }
-      let itemCount = itemCountSpan.innerHTML;
-        itemCount = Number(itemCount) - 1;
-        itemCountSpan.innerHTML = itemCount;  
-      todoItem.parentNode.removeChild(todoItem);
-      
-    });
-  
-    itemInput.value = "";
-  }
-  */
-
-  // Using JavaScript & jQuery -- Looks Much Better 
-    var checkCounter = 0;
-    var totalCounter = 0;
-
-    $("#addbtn").click(function(){
-        var activity = $("#item").val();
-        activity = '<span class="activity_item">' + activity + '</span>';
-        var checkbox = '<input type="checkbox" class="check">';
-        var deleteButton = '<button class="delete btn-danger"></button>';
-        var tCell1 = '<td class="col-1">' + checkbox + '</td>';
-        var tCell2 = '<td class="class="col-10" style="width:100%">' + activity + '</td>';
-        var tCell3 = '<td class="col-1">'+ deleteButton +'</td>';
-        var tCells = tCell1 + tCell2 + tCell3; 
-        $('#todo-list').append('<tr>'+(tCells)+'</tr>');        
-        checkCounter++;
-        totalCounter++;
-        $('#unchecked-count').html(checkCounter);
-        $('#item-count').html(totalCounter);
-    });
-
-    $('#todo-list').on('click', '.check', function(){
-        var checked = $(this).prop('checked');
-        if(checked){
-            checkCounter--;
-            $(this).closest('tr').children('td,th').addClass('selected');
-            $('#unchecked-count').html(checkCounter);
-        } else {
-            checkCounter++;
-            $(this).closest('tr').children('td,th').removeClass('selected');
-            $('#unchecked-count').html(checkCounter);
-        } 
-    });
-
-    $('#todo-list').on('click', '.delete', function() {
-        var row = $(this).closest("tr");
-        if(row.find('.check').prop('checked')){
-        } else {
-            checkCounter--;
-            $('#unchecked-count').html(checkCounter); 
-        }
-        $(this).closest('tr').remove();
-        totalCounter--;
-        $('#item-count').html(totalCounter);
-    });
-
-  </script>
