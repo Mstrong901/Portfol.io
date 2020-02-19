@@ -112,7 +112,7 @@
                                 </div>
                                 <div class="col-4"></div>
                             </div>
-                            <div id="line" style="background-image: linear-gradient(to left, white, black);height:2px; width:0%;"></div>
+                            <div id="line" style="background-image: linear-gradient(to left, white, black);height:2px; width:1%;"></div>
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->          
@@ -353,7 +353,7 @@
         var os2 = $('#message').offset().top;
         var ht2 = $('#message').height();
         if(scroll > os1 + ht1){
-            $("#line").animate({width: "66%"}, {duration:1000, complete: function(){
+            $("#line").animate({width: "100%"}, {duration:1000, complete: function(){
                 $("#visible_animation").animate({opacity:'1.0'},1000);
             }
             });
