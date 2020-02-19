@@ -120,7 +120,7 @@
                             <div class="col-10" style="border: 2px solid slategray; border-radius: 15px; padding:2em;">
                                 <center><img style="opacity:0.1; width:10px; height:10px;" id="profile_pic" src="images/profile.png" alt="profile"></center>
                                 <div id="bio_text" style="opacity: 1%">
-                                    <center></center><h3 style="color:white;"><u>About Me</u><h3></center>
+                                    <center><h3 style="color:white;"><u>About Me</u><h3></center>
                                     <h1 style="color: white; font-size: 20px;">
                                     <p>My name is Matt Strong, and I am a Software Developer based out of Memphis, TN.</p>
                                     <p>I specialize in Visual Art, Web Design, and Application Development.</p>
@@ -336,24 +336,12 @@
             $("#visible_animation").animate({opacity:'1.0'},1500);
             $("#visible_animation").addClass('brighten');
 
+            $("#profile_pic").animate({opacity: '1.0', height: '150px', width: '150px'}, {duration:5000, complete: function(){
+            $("#bio_text").animate({opacity:'1.0'},2500);
+
         });
 
-        $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-        var os1 = $('#home').offset().top;
-        var ht1 = $('#home').height();
-        var os2 = $('#message').offset().top;
-        var ht2 = $('#message').height();
-        if(scroll > os1 + ht1){
 
-        }
-        if(scroll > os1 + ht1){
-            $("#profile_pic").animate({opacity: '1.0', height: '150px', width: '150px'}, {duration:5000, complete: function(){
-                $("#bio_text").animate({opacity:'1.0'},2500);
-            }
-            });
-        }
-    });
     </script>
 
 </body>
