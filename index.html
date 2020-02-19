@@ -105,7 +105,7 @@
                     <div class="col-12">
                         <div class="tagline-message">
                             <div class="row">
-                                    <h2><em>"Design is intelligence made <a style="opacity: 0.1" id="visible_animation">visible</a>."</em></h2><a style="padding-left: 5px; font-size: 14px;"> -Alina Wheeler</a>
+                                <h2><em>"Design is intelligence made <a style="opacity: 0.1" id="visible_animation">visible</a>."</em><a style="padding-left:5px; font-size:14px; color:black;"> -Alina Wheeler</a></h2>
                             </div>
                             <div id="line" style="background-image: linear-gradient(to left, white, black);height:2px; width:1%;"></div>
                         </div>
@@ -334,10 +334,7 @@
                 "fallback_image": "images/dummy.png",   //Fallback image path
                 "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
             });
-            $("#line").animate({width: "100%"}, {duration:1000, complete: function(){
-                $("#visible_animation").animate({opacity:'1.0'},1500);
-            }
-            });
+            
 
         });
 
@@ -348,8 +345,10 @@
         var os2 = $('#message').offset().top;
         var ht2 = $('#message').height();
         if(scroll > os1 + ht1){
-            $("#visible_animation").animate({opacity:'1.0'},1500);
-            $("#line").animate({width: "100%"},1500);
+            $("#line").animate({width: "100%"}, {duration:1000, complete: function(){
+                $("#visible_animation").animate({opacity:'1.0'},1500);
+            }
+            });
         }
         if(scroll > os2 + ht2){
             $("#profile_pic").animate({opacity: '1.0', height: '150px', width: '150px'}, {duration:5000, complete: function(){
