@@ -17,6 +17,14 @@
   vertical-align: middle !important;
 }
 
+.btn-secondary {
+  border-radius: 2px !important;
+  width: 12px !important;
+  height: 12px !important;
+  padding: 1px !important;
+  vertical-align: middle !important;
+}
+
 .list-group-item {
   color: rgb(0, 117, 172);
   text-align: left !important;
@@ -32,9 +40,21 @@
   opacity: .5; /* Firefox */
 }
 
+.selected{
+    background-color: rgba(7,130,197,0.1);
+}
 
+table,th, td {
+    width: 100%;
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.activity_item {
+    padding: 15px !important;
+}
 </style>
-
 <!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
@@ -68,55 +88,35 @@
     <link rel="stylesheet" href="style.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-
 	<!--[if lt IE 9]>
 		<script src="js/vendor/html5shiv.min.js"></script>
 		<script src="js/vendor/respond.min.js"></script>
 	<![endif]-->
-
 </head>
 <body class="left-menu">  
-    
     <div class="menu-wrapper">
-
-
         <header class="vertical-header">
             <div class="vertical-header-wrapper">
                 <nav class="nav-menu">
                     <div class="logo">
                         <a href="index.html"><img src="images/logo.png" alt=""></a>
                     </div><!-- end logo -->
-
                     <div class="margin-block"></div>
-
                     <ul class="primary-menu">
-                        <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a>
-                            
-                        </li>
-
+                        <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a></li>
                         <li class="child-menu"><a href="#">Portfolio <i class="fa fa-angle-right"></i></a>
                             <div class="sub-menu-wrapper">
                                 <ul class="sub-menu center-content">
-                                        <li><a href="https://spacefacemusic.com/" target="blank">Web Design | Spaceface</a></li>
-                                        <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
-                                        <li><a href="todo.html">Application | To Do List </a></li>
+                                    <li><a href="https://spacefacemusic.com/" target="blank">Web Design | Spaceface</a></li>
+                                    <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
+                                    <li><a href="todo.html">Application | To Do List </a></li>
                                 </ul>
                             </div>
                         </li>
-                        
-                        
-                        
                     </ul>
-                    
                     <div class="margin-block"></div>
-
-                    <div class="menu-search">
-                        
-                    </div><!-- end menu-search -->
-
+                    <div class="menu-search"></div><!-- end menu-search -->
                     <div class="margin-block"></div>
-
                     <div class="menu-social">
                         <ul class="list-inline text-center">
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -133,46 +133,52 @@
 <!--Begin To Do-->
 <div id="wrapper">
     <div id="home" class="video-section js-height-full">
-        
         <div class="home-text-wrapper relative container">
             <div class="home-message">
-              <div class="col-md-3"></div>               
-              <div class="col-md-6">
-                <div id="myDIV" class="header">
-                    <h2 style="color: rgba(0, 0, 0, 0.719) ;background-color: rgba(0, 153, 255, 0.404); border-bottom: 2px solid rgba(0, 0, 0, 0.486);">My To Do List</h2>
-                    <ul style="list-style-type:none;" class="list-group list-group-flush">
-                      <li class="list-group-item">Add an Activity to the To Do List</li>
-                      <li class="list-group-item">You May Click the Checkbox to Mark the Activity as Done</li>
-                      <li class="list-group-item">You May Click the Red Box to Delete the Activity</li>
-                    </ul>
+                <!--spacer-->
+                <div class="col-md-3"></div>
+                <!--content-->          
+                <div class="col-md-6">
+
+                    <div id="myDIV" class="header">
+                        <h2 style="color: rgba(0, 0, 0, 0.719) ;background-color: rgba(0, 153, 255, 0.404); border-bottom: 2px solid rgba(0, 0, 0, 0.486);">My To Do List</h2>
+                        <ul style="list-style-type:none;" class="list-group list-group-flush">
+                            <li class="list-group-item">Add an Activity to the To Do List</li>
+                            <li class="list-group-item">You May Click the Checkbox to Mark the Activity as Done</li>
+                            <li class="list-group-item">You May Click the Red Box to Delete the Activity</li>
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <span class="col-md-6">Total Activities: <span id="item-count">0</span></span>
+                        <span class="col-md-6">Activities Left: <span id="unchecked-count">0</span></span>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <input id="item" class="col-md-12" type="text" placeholder="Activity..">
+                    </div>
+                    <br>
+                    <div class="row">
+                        <button id="addbtn" class="btn btn-primary col-md-12">Add Activity</button>
+                        <!-- vanilla <button id="addbtn" class="col-md-4" onclick="newTodo()">Add Activity</button> -->
+                    </div>
+                    <br>
+                    <div class="row">
+                        <table id="todo-list"></table>
+                    </div>
                 </div>
-                
-                <div class="row">
-                  <span class="col-md-6">Total Activities: <span id="item-count">0</span></span>
-                  <span class="col-md-6">Activities Left: <span id="unchecked-count">0</span></span>
-                </div>
-                <div>
-                  <input id="item" class="col-md-8" type="text" placeholder="Activity..">
-                  <button id="addbtn" class="col-md-4" onclick="newTodo()">Add Activity</button>
-                  <br><br>
-                  <div class="row">
-                    <ul style="list-style-type:none; padding-left:5px; background-color:rgba(0, 153, 255, 0.151)" class="col-md-12 list-group" id="todo-list">
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3"></div>
+                <!--spacer-->
+                <div class="col-md-3"></div>
             </div>
         </div>
     </div>
-  </div>
-
-
+</div>
 </body>
 </html>
 
 
 <script>
+/*  Vanilla JavaScript -- Does Not Look Great
   const itemInput = document.getElementById("item");
   const list = document.getElementById("todo-list");
   const itemCountSpan = document.getElementById("item-count");
@@ -236,4 +242,51 @@
   
     itemInput.value = "";
   }
+  */
+
+  // Using JavaScript & jQuery -- Looks Much Better 
+    var checkCounter = 0;
+    var totalCounter = 0;
+
+    $("#addbtn").click(function(){
+        var activity = $("#item").val();
+        activity = '<span class="activity_item">' + activity + '</span>';
+        var checkbox = '<input type="checkbox" class="check">';
+        var deleteButton = '<button class="delete btn-danger"></button>';
+        var tCell1 = '<td class="col-md-1">' + checkbox + '</td>';
+        var tCell2 = '<td class="class="col-md-10">' + activity + '</td>';
+        var tCell3 = '<td class="col-md-1">'+ deleteButton +'</td>';
+        var tCells = tCell1 + tCell2 + tCell3; 
+        $('#todo-list').append('<tr>'+(tCells)+'</tr>');        
+        checkCounter++;
+        totalCounter++;
+        $('#unchecked-count').html(checkCounter);
+        $('#item-count').html(totalCounter);
+    });
+
+    $('#todo-list').on('click', '.check', function(){
+        var checked = $(this).prop('checked');
+        if(checked){
+            checkCounter--;
+            $(this).closest('tr').children('td,th').addClass('selected');
+            $('#unchecked-count').html(checkCounter);
+        } else {
+            checkCounter++;
+            $(this).closest('tr').children('td,th').removeClass('selected');
+            $('#unchecked-count').html(checkCounter);
+        } 
+    });
+
+    $('#todo-list').on('click', '.delete', function() {
+        var row = $(this).closest("tr");
+        if(row.find('.check').prop('checked')){
+        } else {
+            checkCounter--;
+            $('#unchecked-count').html(checkCounter); 
+        }
+        $(this).closest('tr').remove();
+        totalCounter--;
+        $('#item-count').html(totalCounter);
+    });
+
   </script>
