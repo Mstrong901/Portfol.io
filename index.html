@@ -8,11 +8,16 @@
         padding: 5px;
         border-spacing: 0.5rem;
     }
+    th {
+        border-bottom: 2px groove rgba(255,207,32,1);
+        
+    }
 
     .t_d{
         vertical-align: top;
         text-align: left;
         padding: 0.5rem;
+        border-left: 1px solid rgba(255,207,32,1);
     }
 
     .brighten{
@@ -20,7 +25,19 @@
     }
 
     #ed_ex_section{
-        background-color: rgba(17, 18, 20, 0.856);
+        background-color: rgba(0, 0, 0, 0.904);
+    }
+
+    .golink{
+        vertical-align: middle;
+        text-align: center;
+        padding: 5px;
+        padding-top: 14px;
+    }
+
+    #profile_pic{
+        border: 1px groove rgba(255,207,32,0.6);
+        border-radius: 15%;
     }
 </style>
 <!doctype html>
@@ -68,7 +85,7 @@
                             <div class="sub-menu-wrapper">
                                 <ul class="sub-menu center-content">
                                     <li><a href="https://spacefacemusic.com" target="blank" >Web Design | Spaceface</a></li>
-                                    <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
+                                    <li><a href="WW.html">Graphic Design | Music</a></li>
                                     <li><a href="todo.html">Application | To Do List </a></li>
                                     <li><a href="charactersheet.html">Web Form | Character Sheet </a></li>
                                 </ul>
@@ -118,9 +135,9 @@
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-sm-2"></div>
-                            <div class="col-sm-8" style="border: 2px solid rgba(255,207,32,1); border-radius: 15px; padding:2em;">
-                                <center><img id="profile_pic" src="images/profile.jpg" alt="profile" style="width: 10em; height: 10em;"></center>
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-6" style="border: 2px solid rgba(255,207,32,1); border-radius: 15px; padding:2em;">
+                                <center><img id="profile_pic" src="images/profile.png" alt="profile" style="margin-bottom: -2em; width: 10em; height: 10em;"></center>
                                 <div id="bio_text" style="opacity: 1%">
                                     <h3 style="color:rgba(255,207,32,1); text-shadow: 1px 1px goldenrod;">About Me</h3>
                                     <h1 style="color: white; font-size: 1.7rem;">
@@ -130,7 +147,7 @@
                                     </h1>
                                 </div>
                             </div>
-                            <div class="col-sm-2"></div>
+                            <div class="col-sm-3"></div>
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->          
@@ -176,7 +193,7 @@
                                 </div><!-- end entry -->
                                 <div class="item-desc">
                                     <h4><a href="WW.html">Graphic Design</a></h4>
-                                    <p>Poster design for the Wealthy West. </p>
+                                    <p>Poster design for various Musical Acts. </p>
                                 </div>
                             </div><!-- end post-media -->
 
@@ -219,7 +236,7 @@
             <div class="container">
 		   <br><br>
                 <div class="col-12">
-                    <center><h1 style="color: white;">Education & Experience</h1></center>
+                    <center><h1 style="color: rgba(255,207,32,1);">Education & Experience</h1></center>
                     <br>
                     <table class="ed_ex">
                         <tr style="font-size: 16px;">
@@ -333,14 +350,19 @@
                 "fallback_image": "images/dummy.png",   //Fallback image path
                 "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
             });
+            callMe();
+            $("#bio_text").animate({opacity:'1.0'},01);
 
-            $("#line").animate({width: "66%"}, 1500);
-            $("#visible_animation").animate({opacity:'1.0'},1500);
-            $("#visible_animation").addClass('brighten');
-            $("#bio_text").animate({opacity:'1.0'},2500);
         });
 
-
+        function callMe(){
+            $("#line").animate({width: "0%"}, 1);
+            $("#line").animate({width: "66%"}, 2500);
+            $("#visible_animation").animate({opacity:'0.1'},1);
+            $("#visible_animation").animate({opacity:'1.0'},2500);
+            $("#visible_animation").removeClass('brighten');
+            $("#visible_animation").addClass('brighten');
+        }
     </script>
 
 </body>
