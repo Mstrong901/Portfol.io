@@ -18,6 +18,10 @@
     .brighten{
         color: rgba(255,207,32,1);
     }
+
+    #ed_ex_section{
+        background-color: rgba(17, 18, 20, 0.856);
+    }
 </style>
 <!doctype html>
 <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
@@ -55,7 +59,7 @@
             <div class="vertical-header-wrapper">
                 <nav class="nav-menu">
                     <div class="logo">
-                        <img style="max-height: 50px; max-width: 50px;" src="images/logo.png" alt="">
+                        <img src="images/logo.png" alt="">
                     </div><!-- end logo -->
                     <div class="margin-block"></div>
                     <ul class="primary-menu">
@@ -107,26 +111,26 @@
         <div class="section db" id="bio">
             <div class="container">
                 <div class="row">
-                    <center><h2 style="color:white; font-size:1.4rem;"><em>"Design is intelligence made <a style="opacity: 0.1" id="visible_animation">visible</a>."</em><br><a style="padding-left:5px; font-size:1.0rem; color:white;"> -Alina Wheeler</a></h2></center>
+                    <center><h2 style="color:white; font-size:1.6rem;"><em>"Design is intelligence made <a style="opacity: 0.1" id="visible_animation">visible</a>."</em><br><a style="padding-left:5px; font-size:1.2rem; color:white;"> -Alina Wheeler</a></h2></center>
                 </div>
-                <div id="line" style="background-image: linear-gradient(to left,rgba(255,207,32,1), black, black, black, black, black);height:2px; width:1%;"></div>
+                <div id="line" style="background-image: linear-gradient(to left,rgba(255,207,32,1), black, black, black, black, black);height:2px; width:1%; padding-left: 25em;"></div>
                 <br>
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
-                            <div class="col-1"></div>
-                            <div class="col-10" style="border: 2px solid rgba(255,207,32,1); border-radius: 15px; padding:2em;">
-                                <center><img style="opacity:0.1; width:10px; height:10px;" id="profile_pic" src="images/profile.png" alt="profile"></center>
+                            <div class="col-sm-2"></div>
+                            <div class="col-sm-8" style="border: 2px solid rgba(255,207,32,1); border-radius: 15px; padding:2em;">
+                                <center><img id="profile_pic" src="images/profile.jpg" alt="profile" style="width: 10em; height: 10em;"></center>
                                 <div id="bio_text" style="opacity: 1%">
-                                    <h3 style="color:rgba(255,207,32,1); text-shadow: 1px 1px goldenrod;">About Me<h3>
-                                    <h1 style="color: white; font-size: 18px;">
-                                    <p>My name is Matt Strong, and I am a Software Developer based out of Memphis, TN.</p>
+                                    <h3 style="color:rgba(255,207,32,1); text-shadow: 1px 1px goldenrod;">About Me</h3>
+                                    <h1 style="color: white; font-size: 1.7rem;">
+                                    <p>My name is Matt Strong, and I am a Software Developer based out of Memphis,TN.</p>
                                     <p>I specialize in Visual Art, Web Design, and Application Development.</p>
                                     <p>Below you will find some examples of my work.</p>
                                     </h1>
                                 </div>
                             </div>
-                            <div class="col-1"></div>
+                            <div class="col-sm-2"></div>
                         </div>
                     </div><!-- end col -->
                 </div><!-- end row -->          
@@ -211,7 +215,7 @@
             </div><!-- end container -->
         </section><!-- end section -->
         <br><br>
-        <section style="background-color: slategray;">
+        <section id="ed_ex_section" >
             <div class="container">
 		   <br><br>
                 <div class="col-12">
@@ -330,14 +334,10 @@
                 "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
             });
 
-            $("#line").animate({width: "100%"}, 1500);
+            $("#line").animate({width: "66%"}, 1500);
             $("#visible_animation").animate({opacity:'1.0'},1500);
             $("#visible_animation").addClass('brighten');
-
-            $("#profile_pic").animate({opacity: '1.0', height: '150px', width: '150px'}, {duration:5000, complete: function(){
-                $("#bio_text").animate({opacity:'1.0'},2500);
-            }
-            });
+            $("#bio_text").animate({opacity:'1.0'},2500);
         });
 
 
