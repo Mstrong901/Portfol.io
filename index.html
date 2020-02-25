@@ -26,6 +26,9 @@
     #ed_ex_section{
         background-color: rgba(0, 0, 0, 0.904);
     }
+    #bio{
+        background-image: url("images/background.png");
+    }
 
     .golink{
         vertical-align: middle;
@@ -35,8 +38,9 @@
     }
 
     #profile_pic{
-        border: 1px groove rgba(255,207,32,0.6);
-        border-radius: 15%;
+        border-right: 1px groove rgba(255,207,32,0.6);
+        border-bottom: 1px groove rgba(255,207,32,0.2);
+        border-radius: 100%;
     }
 </style>
 <!doctype html>
@@ -111,9 +115,10 @@
             <div class="overlay"></div>
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
-                    <p id="nameText">Matt Strong</p>
+                    <h1 id="portfolioText">Matt Strong</h2>
                     <hr>
-                    <h2 id="portfolioText">Web Design Portfolio</h2>
+                    <h3 id="portfolioText">Web Design Portfolio</h2>
+                    <br>
                     <div class="btn-wrapper">
                         <div class="text-center">
                             <a href="#bio" class="btn btn-primary">Read More</a>
@@ -129,14 +134,14 @@
                 <div class="row">
                     <center><h2 style="color:white; font-size:1.6rem;"><em>"Design is intelligence made <a style="opacity: 0.1" id="visible_animation">visible</a>."</em><br><a style="padding-left:5px; font-size:1.2rem; color:white;"> -Alina Wheeler</a></h2></center>
                 </div>
-                <div id="line" style="background-image: linear-gradient(to left,rgba(255,207,32,1), black, black, black, black, black);height:2px; width:1%; padding-left: 25em;"></div>
+                <div id="line" style="background-image: linear-gradient(to left,rgba(255,207,32,1), rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0), rgba(10, 10, 10, 0), rgba(10, 10, 10, 0));height:2px; width:1%; padding-left: 25em;"></div>
                 <br>
                 <div class="row">
                     <div class="col-12">
                         <div class="row">
                             <div class="col-sm-3"></div>
                             <div class="col-sm-6" style="border: 2px solid rgba(255,207,32,1); border-radius: 15px; padding:2em;">
-                                <center><img id="profile_pic" src="images/profile.png" alt="profile" style="margin-bottom: -2em; width: 10em; height: 10em;"></center>
+                                <center><img id="profile_pic" src="images/profile.png" alt="profile" style="margin-bottom: -2em; width: 8em; height: 8em;"></center>
                                 <div id="bio_text" style="opacity: 1%">
                                     <h3 style="color:rgba(255,207,32,1); text-shadow: 1px 1px goldenrod;">About Me</h3>
                                     <h1 style="color: white; font-size: 1.7rem;">
@@ -291,14 +296,24 @@
                     <div class="col-lg-6 col-12">
                         <div class="widget clearfix">
                             <div class="newsletter-widget">
-                               
-                                <form class="form-inline" role="search">
-                                    <div class="form-1">
-                                        <p style="color: white;">Contact:</p>
-                                        <input type="text" class="form-control" placeholder="Enter email here..">
-                                        <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane-o"></i></button>
+                                <form action="https://formspree.io/mrgkboag" method="POST" class="form-inline" role="search">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <h1 style="color:white;">Contact Me</h1>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-control" type="text" name="name" placeholder="Email:">
+                                        </div>
+                                        <br>
+                                        <div class="col">
+                                            <textarea style="height: 10em; " class="form-control" name="_replyto" placeholder="Message:"></textarea>                                        
+                                        </div>
+                                        <br>
+                                        <button type="submit" value="Send" class="btn btn-primary"><i class="fa fa-paper-plane-o"></i></button>
+
                                     </div>
                                 </form>
+
                             </div><!-- end newsletter -->
                         </div><!-- end widget -->
                     </div><!-- end col -->
