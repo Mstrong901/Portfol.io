@@ -33,7 +33,39 @@
         color: green;
         background-color: rgba(126, 216, 146, 0.329) !important;
     }
-  
+    
+    .dice_pic {
+        height: 10rem;
+        width: 10rem;
+    }
+
+    .disabled {
+        background-color: rgba(255, 30, 0, 0.651) !important;
+    }
+
+    #bg {
+        position: fixed; 
+        top: -50%; 
+        left: -50%; 
+        width: 200%; 
+        height: 200%;
+    }
+    #bg img {
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        right: 0; 
+        bottom: 0; 
+        margin: auto; 
+        min-width: 50%;
+        min-height: 50%;
+    }
+
+    #wrapper {
+        color: black !important;
+    }
+
+
   </style>
   
   <!doctype html>
@@ -133,7 +165,10 @@
     </div><!-- end menu-wrapper -->
   
   <!--Begin CharSheet-->
-  <div id="wrapper">
+  <div id="bg">
+    <img src="images/oldmapbackground.jpg" alt="">
+  </div>
+  <div id="wrapper" >
     <div id="home" class="video-section js-height-full">
         
         <div class="home-text-wrapper relative container">
@@ -142,12 +177,13 @@
                 <form>
                     <h1>Dungeons & Dragons Character Sheet</h1>
                   <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                       <div class="col">
                         <label for="">Name</label>
                         <input type="text" class="form-control" placeholder="">
+                        <br>
                       </div>
-                      <br>
+                      
                       <div class="col">
                         <label for="">Race</label>
                         <select id="raceSelector" class="form-control" placeholder="">
@@ -162,10 +198,11 @@
                             <option>Human</option>
                             <option>Tiefling</option>
                         </select>
+                        <br>
                       </div>
                     </div>
   
-                    <div class="col-md-4">
+                    <div class="col-sm-4">
                         <div class="col">
                           <label for="">Class</label>
                           <select id="classes" class="form-control" placeholder="">
@@ -184,8 +221,8 @@
                             <option>Wizard</option>
   
                         </select>
-                        </div>
                         <br>
+                        </div>
                         <div class="col">
                           <label for="">Background</label>
                           <select id="backgrounds" class="form-control" placeholder="">
@@ -206,79 +243,99 @@
                               <option>Spy</option>
                               <option>Urchin</option>
                           </select>
+                          <br>
                         </div>
                       </div>
   
-                      <div class="col-md-4">
+                      <div class="col-sm-4">
                         <div class="col">
                           <label for="">Age</label>
                           <input type="text" class="form-control" placeholder="">
+                          <br>
                         </div>
-                        <br>
                         <div class="col">
                           <label for="">Alignment</label>
                           <input type="text" class="form-control" placeholder="">
+                          <br>
                         </div>
                       </div>
                   </div>
                   <br>
                   <div class="row">
-                      <div class="col-md-2"></div>
-                      <button id="statsBtn" style="color: rgba(6, 93, 151, 0.541);" class="col-md-8 btn">Roll for Your Stats!</button>
+                      <div class="col-sm-2"></div>
+                      <button id="statsBtn" style="color: rgba(6, 93, 151, 0.541);" class="col-sm-8 btn">Roll for Your Stats!</button>
                   </div>
+                  <br>
+                  <div class="row">
+                    <div id="rollsLeft"></div>
+                </div>
   
                   
                 
   
                 <br><hr><br>
-                <div class="row">
-                    <div class="col-md-3"></div>
-                    <div id="rolls" class="col-md-3">
-                        <ul class="list-group" title="1st Roll">
-                            <li class="list-group-item rolls" id="stat1"></li>
-                        </ul>
-                        <ul class="list-group" title="2nd Roll">
-                            <li class="list-group-item rolls" id="stat2"></li>
-                        </ul>
-                        <ul class="list-group" title="3rd Roll">
-                            <li class="list-group-item rolls" id="stat3"></li>
-                        </ul>
-                        <ul class="list-group" title="4th Roll">
-                            <li class="list-group-item rolls" id="stat4"></li>
-                        </ul>
-                        <ul class="list-group" title="5th Roll">
-                            <li class="list-group-item rolls" id="stat5"></li>
-                        </ul>
-                        <ul class="list-group" title="6th Roll">
-                            <li class="list-group-item rolls" id="stat6"></li>
-                        </ul>
+                <div>
+                    
+                    <div id="rolls"> 
+                        <div class="col-sm-3">
+                            <ul class="list-group" title="1st Roll">
+                                <img class="rolls dice_pic" id="pic1" src="" alt="">
+                            </ul>
+                            <ul class="list-group" title="2nd Roll">
+                                <img class="rolls dice_pic" id="pic2" src="" alt="">
+                            </ul>
+                            <ul class="list-group" title="3rd Roll">
+                                <img class="rolls dice_pic" id="pic3" src="" alt="">
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <ul class="list-group" title="4th Roll">
+                                <img class="rolls dice_pic" id="pic4" src="" alt="">
+                            </ul>
+                            <ul class="list-group" title="5th Roll">
+                                <img class="rolls dice_pic" id="pic5" src="" alt="">
+                            </ul>
+                            <ul class="list-group" title="6th Roll">
+                                <img class="rolls dice_pic" id="pic6" src="" alt="">
+                            </ul>
+                        </div>
                     </div>
   
-                    <div id="stats" class="col-md-3">
-                        <ul class="list-group" title="Strength">
-                            <li class="list-group-item stats" id="stat_STR"></li>
-                        </ul>
-                        <ul class="list-group " title="Dexterity">
-                            <li class="list-group-item stats" id="stat_DEX"></li>
-                        </ul>
-                        <ul class="list-group " title="Constitution">
-                            <li class="list-group-item stats" id="stat_CON"></li>
-                        </ul>
-                        <ul class="list-group " title="Intelligence">
-                            <li class="list-group-item stats" id="stat_INT"></li>
-                        </ul>
-                        <ul class="list-group " title="Wisdom">
-                            <li class="list-group-item stats" id="stat_WIS"></li>
-                        </ul>
-                        <ul class="list-group " title="Charisma">
-                            <li class="list-group-item stats" id="stat_CHA"></li>
-                        </ul>
+                    <div id="stats">
+                        <div class="col-sm-3">
+                            <ul class="list-group" title="Strength">
+                                <li class="list-group-item stats" id="stat_STR"></li>
+                                <br>
+                            </ul>
+                            <ul class="list-group " title="Dexterity">
+                                <li class="list-group-item stats" id="stat_DEX"></li>
+                                <br>
+                            </ul>
+                            <ul class="list-group " title="Constitution">
+                                <li class="list-group-item stats" id="stat_CON"></li>
+                                <br>
+                            </ul>
+                        </div>
+                        <div class="col-sm-3">
+                            <ul class="list-group " title="Intelligence">
+                                <li class="list-group-item stats" id="stat_INT"></li>
+                                <br>
+                            </ul>
+                            <ul class="list-group " title="Wisdom">
+                                <li class="list-group-item stats" id="stat_WIS"></li>
+                                <br>
+                            </ul>
+                            <ul class="list-group " title="Charisma">
+                                <li class="list-group-item stats" id="stat_CHA"></li>
+                                <br>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col-md-3"></div>
+                    </div>
                 </div>
 
                 <div class="form-group">
-                    <div class="col-md-12 text-center">
+                    <div class="col-sm-12 text-center">
                         <button id="submit" type="submit" class="btn btn-primary btn-lg">Submit</button>
                     </div>
                 </div>
@@ -318,14 +375,39 @@
                 var num5 = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
                 var num6 = (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1) + (Math.floor(Math.random() * 5) + 1)
 
-                $("#stat1").html(num1); 
-                $("#stat2").html(num2); 
-                $("#stat3").html(num3); 
-                $("#stat4").html(num4);
-                $("#stat5").html(num5); 
-                $("#stat6").html(num6);
+                var src1 = "images/" + (num1) + "dice.png";
+                $("#pic1").attr('src',src1);
+                $("#pic1").attr('alt', num1);
+
+                var src2 = "images/" + (num2) + "dice.png";
+                $("#pic2").attr('src',src2);
+                $("#pic2").attr('alt', num2);
+
+                var src3 = "images/" + (num3) + "dice.png";
+                $("#pic3").attr('src',src3);
+                $("#pic3").attr('alt', num3);
+
+                var src4 = "images/" + (num4) + "dice.png";
+                $("#pic4").attr('src',src4);
+                $("#pic4").attr('alt', num4);
+
+                var src5 = "images/" + (num5) + "dice.png";
+                $("#pic5").attr('src',src5);
+                $("#pic5").attr('alt', num5);
+
+                var src6 = "images/" + (num6) + "dice.png";
+                $("#pic6").attr('src',src6);
+                $("#pic6").attr('alt', num6);
+
+
                 var dispRowsLeft = rollsLeft - 1;
-                    alert("You May Re-Roll Your Stats " + dispRowsLeft +" More Times");
+                if(dispRowsLeft > 1){
+                    $("#rollsLeft").html("You May Re-Roll Your Stats " + dispRowsLeft +" More Times");
+                } else if(dispRowsLeft > 0){
+                    $("#rollsLeft").html("You May Re-Roll Your Stats " + dispRowsLeft +" More Time");
+                } else if(dispRowsLeft == 0){
+                    $("#rollsLeft").html("You Have Used All Your Rolls!");
+                }
             } else { 
                 alert("You Have Used All Your Rolls!");
             }
@@ -342,14 +424,16 @@
         $(this).toggleClass("selected");
     }
   
-    if($(this).attr('class') == 'list-group-item rolls disabled selected'){
+    if($(this).attr('class').includes('disabled')){
         var r = confirm("You have already used this Roll, Would You Like to Reselect?");
         if (r == true) {
             $(this).toggleClass("disabled");
             $(".rolls").removeClass("disabled");
             $(".rolls").removeClass("selected");
+            $(".stats").removeClass("enhanced");
             $(".stats").html(null);
         } else {
+
         }
     }
 
@@ -363,8 +447,9 @@
         alert("only select one roll at a time");
     } else {
         var statID = $(this).attr('id');
+        var rollVal = $(".selected").attr('alt');
+        rollVal = parseFloat(rollVal);
         var rollID = $(".selected").attr('id');
-        var rollVal = parseInt($("#" + rollID).text());
         var race = $("#raceSelector").val();
   
         if(typeof rollID == "undefined"){
@@ -424,11 +509,9 @@
                 }
             }
   
-            
-  
             $("#" + statID).html(rollVal);
-            $("#" + rollID).toggleClass("selected");
-            $("#" + rollID).toggleClass("disabled");
+            $("#" + rollID).removeClass("selected");
+            $("#" + rollID).addClass("disabled");
         }
     }
   
