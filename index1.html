@@ -1,0 +1,385 @@
+<style>
+    .ed_ex{
+	    vertical-align: top;
+	    text-align: left;
+        font-size: 12px; 
+        width:100%; 
+        color:white; 
+        padding: 5px;
+        border-spacing: 0.5rem;
+    }
+    th {
+        border-bottom: 2px groove rgba(255,207,32,1);
+        
+    }
+
+    .t_d{
+        vertical-align: top;
+        text-align: left;
+        padding: 0.5rem;
+    }
+
+    .brighten{
+        color: rgba(255,207,32,1);
+    }
+
+    #ed_ex_section{
+        background-color: rgba(0, 0, 0, 0.904);
+    }
+    #bio{
+        background-image: url("images/background.png");
+    }
+
+    .golink{
+        vertical-align: middle;
+        text-align: center;
+        padding: 5px;
+        padding-top: 14px;
+    }
+
+    #profile_pic{
+        border-right: 1px groove rgba(255,207,32,0.6);
+        border-bottom: 1px groove rgba(255,207,32,0.2);
+        border-radius: 100%;
+    }
+</style>
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- Site Meta -->
+    <title>Matt Strong | Portfolio</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> 
+	<!-- Custom & Default Styles -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="style.css">
+	<!--[if lt IE 9]>
+		<script src="js/vendor/html5shiv.min.js"></script>
+		<script src="js/vendor/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body class="left-menu">  
+    <div class="menu-wrapper">
+        <header class="vertical-header">
+            <div class="vertical-header-wrapper">
+                <nav class="nav-menu">
+                    <div class="logo">
+                        <img src="images/logo.png" alt="">
+                    </div><!-- end logo -->
+                    <div class="margin-block"></div>
+                    <ul class="primary-menu">
+                        <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a></li>
+                        <li class="child-menu"><a href="#">Portfolio <i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-wrapper">
+                                <ul class="sub-menu center-content">
+                                    <li><a href="https://spacefacemusic.com" target="blank" >Web Design | Spaceface</a></li>
+                                    <li><a href="WW.html">Graphic Design | Social Media Designs</a></li>
+                                    <li><a href="todo.html">Application | To Do List </a></li>
+                                    <li><a href="charactersheet.html">Web Form | Character Sheet </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="margin-block"></div>
+                    <div class="menu-search"></div><!-- end menu-search -->
+                    <div class="margin-block"></div>
+                    <div class="menu-social">
+                        <ul class="list-inline text-center">
+                        </ul>
+                    </div><!-- end menu -->
+                </nav><!-- end nav-menu -->
+            </div><!-- end vertical-header-wrapper -->
+        </header><!-- end header -->
+    </div><!-- end menu-wrapper -->
+    <div id="wrapper">
+        <div id="home" class="video-section">
+            <div class="overlay"></div>
+            <div class="home-text-wrapper relative container">
+                <div class="home-message">
+                    <h1 id="portfolioText">Matt Strong</h2>
+                    <hr>
+                    <h3 id="portfolioText">Web Design Portfolio</h2>
+                    <br>
+                    <div class="btn-wrapper">
+                        <div class="text-center">
+                            <a href="#bio" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="section db" id="bio">
+            <div class="container">
+                <div class="row">
+                    <center><h2 style="color:white; font-size:1.6rem;"><em>"Design is intelligence made <a style="opacity: 0.1" id="visible_animation">visible</a>."</em><br><a style="padding-left:5px; font-size:1.2rem; color:white;"> -Alina Wheeler</a></h2></center>
+                </div>
+                <div id="line" style="background-image: linear-gradient(to left,rgba(255,207,32,1), rgba(10, 10, 10, 0.2), rgba(10, 10, 10, 0), rgba(10, 10, 10, 0), rgba(10, 10, 10, 0));height:2px; width:1%; padding-left: 25em;"></div>
+                <br>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="row">
+                            <div class="col-sm-3"></div>
+                            <div class="col-sm-6" style="border: 2px solid rgba(255,207,32,1); border-radius: 15px; padding:2em;">
+                                <center><img id="profile_pic" src="images/profile.png" alt="profile" style="margin-bottom: -1em; width: 8em; height: 8em;"></center>
+                                <div id="bio_text" style="opacity: 1%">
+                                    <h3 style="color:rgba(255,207,32,1); text-shadow: 1px 1px goldenrod;">About Me</h3>
+                                    <h1 style="color: white; font-size: 1.7rem;">
+                                    <p>My name is Matt Strong, and I am a Software Developer based out of Memphis,TN.</p>
+                                    <p>I specialize in Visual Art, Web Design, and Application Development.</p>
+                                    <p>Below you will find some examples of my work.</p>
+                                    </h1>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="col-sm-3"></div>
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->          
+            </div><!-- end container -->
+        </div><!-- end section -->
+
+        <section class="section lb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h3>Recent Works</h3>
+                </div><!-- end title -->
+                <div class="case-top clearfix">
+                    <div class="pull-right">
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="portfolio row with-desc">
+                            <div class="post-media pitem item-w1 item-h1 cat1">
+                                <div class="entry">
+                                    <img src="images/spaceface.png" alt="" class="img-responsive">
+                                    <div class="magnifier">
+                                        <a class="golink" href="https://spacefacemusic.com">
+                                           <i class="fa fa-link"></i>
+                                        </a>
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <div class="item-desc">
+                                    <h4><a href="https://spacefacemusic.com" target="blank">Web Design</a></h4>
+                                    <p> Website for Spaceface. </p>
+                                </div>
+                            </div><!-- end post-media -->
+
+                            <div class="post-media pitem item-w1 item-h1 cat2">
+                                <div class="entry">
+                                    <img style="max-height: 600px; max-width: 800px;" src="images/WW.png" alt="" class="img-responsive">
+                                    <div class="magnifier">
+                                        <a class="golink" href="WW.html">
+                                           <i class="fa fa-link"></i>
+                                        </a>
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <div class="item-desc">
+                                    <h4><a href="WW.html">Graphic Design</a></h4>
+                                    <p>Poster design for various Musical Acts. </p>
+                                </div>
+                            </div><!-- end post-media -->
+
+                            <div class="post-media pitem item-w1 item-h1 cat3">
+                                <div class="entry">
+                                    <img src="images/todo.png" alt="" class="img-responsive">
+                                    <div class="magnifier">
+                                        <a class="golink" href="todo.html">
+                                           <i class="fa fa-link"></i>
+                                        </a>
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <div class="item-desc">
+                                    <h4>Javascript Application</a></h4>
+                                    <p>Simple To Do List Application</p>
+                                </div>
+                            </div><!-- end post-media -->
+
+                            <div class="post-media pitem item-w1 item-h1 cat4">
+                                <div class="entry">
+                                    <img src="images/cs.png" alt="">
+                                    <div class="magnifier">
+                                        <a class="golink" href="charactersheet.html">
+                                           <i class="fa fa-link"></i>
+                                        </a>
+                                    </div><!-- end magnifier -->
+                                </div><!-- end entry -->
+                                <div class="item-desc">
+                                    <h4><a href="#">Complex Front-End Application</a></h4>
+                                    <p>Dungeons & Dragons Character Creation Form</p>
+                                </div>
+                            </div><!-- end post-media --> 
+                        </div>
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+        <br><br>
+        <section id="ed_ex_section" >
+            <div class="container">
+		   <br><br>
+                <div class="col-12">
+                    <center><h1 style="color: rgba(255,207,32,1);">Education & Experience</h1></center>
+                    <br>
+                    <table class="ed_ex">
+                        <tr style="font-size: 16px;">
+                          <th class="t_d" style="width: 20%;">Education</th>
+                          <th class="t_d" style="width: 10%;">Date</th>
+                          <th class="t_d" style="width: 70%;">Description</th>
+                        </tr>
+                        <tr>
+                          <td class="t_d">LaunchCode</td>
+                          <td class="t_d">2018-2019</td>
+                          <td class="t_d"><em>Full Stack Coding Education</em> <br>
+                            • Instructed in Python, HTML, CSS, JavaScript, jQuery, and SQL.</td>
+                        </tr>
+                        <tr>
+                          <td class="t_d">Tech901</td>
+                          <td class="t_d">2018</td>
+                          <td class="t_d"><em>CompTIA A+ Certification</em><br>
+                            • IT Fundamentals: Hardware, Software, and Security.</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table class="ed_ex">
+                        <tr style="font-size: 16px;">
+                          <th class="t_d" style="width:20%;">Experience</th>
+                          <th class="t_d" style="width:10%;">Date</th>
+                          <th class="t_d" style="width:70%;">Description</th>
+                        </tr>
+                        <tr>
+                          <td class="t_d">Upper Edge Tech</td>
+                          <td class="t_d"> 2019-2020</td>
+                          <td class="t_d"><em>Assistant Software Developer</em><br>
+                            • Integrate Full-Stack applications to navigate through multiple databases. <br>
+                            • Back-End infrastructure utilizing primarily PHP. <br>
+                            • Front-End framework using HTML, CSS, JavaScript, jQuery, and Bootstrap. <br>
+                            • MsSQL and MySQL databases queried through SQL and Codeigniter.
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="t_d">The Flaming Lips</td>
+                          <td class="t_d">2015-2018</td>
+				          <td class="t_d"><em>Backline Technician</em><br>
+                            • Ensure the working condition and logistics of electronic equipment for an international musical act.
+                        </td>
+                        </tr>
+                    </table>
+			<br><br>
+                </div>
+            </div>
+        </section>
+        <footer class="section footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="widget clearfix">
+                            <div class="newsletter-widget">
+                                <form action="https://formspree.io/mrgkboag" target="blank" method="POST" class="form-inline" role="search">
+                                    <div class="form-row">
+                                        <div class="col">
+                                            <h1 style="color:white;">Contact Me</h1>
+                                        </div>
+                                        <div class="col">
+                                            <input class="form-control" type="text" name="_replyto" placeholder="Email:">
+                                        </div>
+                                        <br>
+                                        <div class="col">
+                                            <textarea style="height: 10em; " class="form-control" name="message" placeholder="Message:"></textarea>                                        
+                                        </div>
+                                        <br>
+                                        <button type="submit" value="Send" class="btn btn-primary"><i class="fa fa-paper-plane-o"></i></button>
+                                    </div>
+                                    <br>
+                                    <p>Connect with me on <a class="linkedIn" style="color: rgb(18, 172, 211)" href="https://www.linkedin.com/in/strongmatthew/">LinkedIn</a></p>
+
+                                </form>
+
+                            </div><!-- end newsletter -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+
+        <div class="section copyrights">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-3">
+                        <div class="cop-logo">
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-9 text-right">
+                        <div class="cop-links">
+                            <ul class="list-inline">
+                                <li> 2020  •  Matt Strong</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- end wrapper -->
+
+    <!-- jQuery Files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/rotate.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/masonry.js"></script>
+    <script src="js/masonry-4-col.js"></script>
+    <!-- VIDEO BG PLUGINS -->
+    <script src="videos/libs/swfobject.js"></script> 
+    <script src="videos/libs/modernizr.video.js"></script> 
+    <script src="videos/libs/video_background.js"></script> 
+    <script>
+        jQuery(document).ready(function($) {
+            var Video_back = new video_background($("#home"), { 
+                "position": "absolute", //Follow page scroll
+                "z-index": "-1",        //Behind everything
+                "loop": true,           //Loop when it reaches the end
+                "autoplay": true,       //Autoplay at start
+                "muted": true,          //Muted at start
+                "mp4":"videos/video.mp4" ,     //Path to video mp4 format
+                "video_ratio": 1.7778,              // width/height -> If none provided sizing of the video is set to adjust
+                "fallback_image": "images/dummy.png",   //Fallback image path
+                "priority": "html5"             //Priority for html5 (if set to flash and tested locally will give a flash security error)
+            });
+            callMe();
+            $("#bio_text").animate({opacity:'1.0'},01);
+
+        });
+
+        function callMe(){
+            $("#line").animate({width: "0%"}, 1);
+            $("#line").animate({width: "66%"}, 2500);
+            $("#visible_animation").animate({opacity:'0.1'},1);
+            $("#visible_animation").animate({opacity:'1.0'},2500);
+            $("#visible_animation").removeClass('brighten');
+            $("#visible_animation").addClass('brighten');
+        }
+    </script>
+
+</body>
+</html>
