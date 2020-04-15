@@ -258,20 +258,6 @@
 /* Header                                                                        */
 /*********************************************************************************/
 
-	#header
-	{
-		position: relative;
-		background: #ddd url(../images/headerbackground.png);
-		background-size: 100%;
-	}
-
-	#logo
-	{
-	}
-	
-	#nav
-	{
-	}
 
 		#nav ul
 		{
