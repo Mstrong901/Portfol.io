@@ -34,6 +34,50 @@
     #bio{
         border: 5px groove rgb(18, 172, 211, 0.1);
     }
+    .desktop-bg{
+        background: #ddd url(../images/background_lg.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 40em;
+        width: 100%;
+    }
+    .desktop-nav{
+        position: relative;
+        top: 20em;
+    }
+    .mobile-bg{
+        background: url(../images/logo.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 300px;
+    }
+
+    .desktop-bio{
+        width: 60%;
+        height: 60%;
+    }
+    .mobile-bio{
+        width: 100%;
+        height: 100%;
+    }
+    .title{
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        border-image: linear-gradient(to right, gray , lightslategray);
+        border-image-slice: 1;
+        background-color: whitesmoke;
+        width: 100%;
+        height: 100%;
+        display: block;
+
+    }
+    .title_head{
+        color:black;
+        font-weight:lighter !important;
+        font-size: 28px;
+        
+    }
+
 </style>
 <html>
 	<head>
@@ -61,20 +105,10 @@
 	<body class="homepage">
 
 	<!-- Header -->
-		<div id="header">
+		<div id="header" class="head_pic">
 			<div class="container">
-					
-				<!-- Logo -->
-					<div id="logo">
-                        <br><br><br><br><br><br>
-                        <br><br><br><br><br><br>
-
-
-					</div>
-				
-                <!-- Nav -->
 					<nav id="nav" style="margin-bottom: -2em;">
-						<ul>
+						<ul id="nav_bar">
                             <li><a href="https://spacefacemusic.com" target="blank" >Web Design</a></li>
                             <li><a href="WW.html">Graphic Design</a></li>
                             <li><a href="todo.html">Application</a></li>
@@ -90,42 +124,21 @@
 	<!-- Main -->
 		<div id="main">
 			<div class="container" style="text-align: center;">
-            <img id="bio" src="images/AboutMe.png" width="75%" height="75%;" alt="">
-
-            <!-- 				
-                <div class="row">
-                    <div class="3u">
-                        <span class="spacer">|</span>
-                    </div>
-                    <div class="6u skel-cell-important">
-                        <section id="content">
-                            <p style="text-align: center;"><img id="profile_pic" src="images/profile.png" alt="" style="width:9em; height: 9em;"></p>
-                            <header>
-                                <h2>About Me</h2>
-                            </header>
-                            <p>My name is Matt Strong, and I am a Software Developer based out of Memphis,TN.</p>
-                            <p>I specialize in Visual Art, Web Design, and Application Development.</p>
-                            <p>Below are some examples of my work, ranging from Graphic Design to Full Stack Development.</p>
-                            <p>I greatly appreciate your time and consideration upon viewing these pieces.</p>
-                        </section>
-                    </div>	
-                    <div class="3u">
-                        <span class="spacer">|</span>
-                    </div>	
-                </div>
-             -->
+                <img id="bio" src="images/AboutMe.png" alt="">
             </div>
-            <div class="container">
-                <br>
+            <br>
+            <br>
+            <div class="title">
                 <center>
-                    <hr>
                     <br>
-                    <header>
-                        <h2>Portfolio</h2>
-                    </header>
-                    <hr>
+                        <a class="title_head">Portfolio</a>
+                    <br>
                     <br>
                 </center>
+            </div>
+            <br>
+            <div class="container">
+
                 <div class="row">
 					<div class="3u">
 						<section class="portfolio_item">
@@ -171,9 +184,20 @@
                             </a>						
                         </section>
 					</div>
-				</div>
-			</div>
-		</div>
+                </div>
+            </div>
+            <br><br>
+
+            <br>
+        </div>
+        <div class="title">
+            <center>
+                <br>
+                    <a class="title_head">Background</a>
+                <br>
+                <br>
+            </center>
+        </div>
 	<!-- Main -->
 
 	<!-- Footer -->
@@ -261,3 +285,17 @@
 
 	</body>
 </html>
+
+<script>
+    if (window.matchMedia("(min-width: 720px)").matches) {
+        $("#header").addClass("desktop-bg");
+        $("#nav_bar").addClass("desktop-nav");
+        $("#bio").addClass("desktop-bio");
+
+
+    } else {
+        $("#header").addClass("mobile-bg");
+        $("#bio").addClass("mobile-bio");
+
+    }
+</script>
