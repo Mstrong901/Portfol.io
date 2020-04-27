@@ -1,0 +1,597 @@
+<style>
+    .radio_button{
+        padding-right: 50px;
+        border-right: 1px solid black;
+    }
+    .full_row {
+        width: 100%;
+    }
+    table {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+    td, tr {
+        width: 15em;
+        padding: 5px !important;
+        border: 5px solid white;
+    }
+    .image_class{
+        max-width: 75%;
+        max-height: 75%;
+
+    }
+
+    .description {
+        padding: 2em !important;
+        text-align: left;
+    }
+    td {
+        background-color: whitesmoke;
+        color: darkslategray;
+    }
+    .name {
+        color: darkslategray;
+    }
+
+
+</style>
+  
+  <!doctype html>
+  <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+  <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+  <head>
+  
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Site Meta -->
+    <title>Recipes</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  
+  <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> 
+  
+  <!-- Custom & Default Styles -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="style.css">
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  
+  
+  <!--[if lt IE 9]>
+    <script src="js/vendor/html5shiv.min.js"></script>
+    <script src="js/vendor/respond.min.js"></script>
+  <![endif]-->
+  
+  </head>
+  <body class="left-menu">  
+    
+    <div class="menu-wrapper">
+  
+  
+        <header class="vertical-header">
+            <div class="vertical-header-wrapper">
+                <nav class="nav-menu">
+                    <div class="logo">
+                        <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    </div><!-- end logo -->
+  
+                    <div class="margin-block"></div>
+  
+                    <ul class="primary-menu">
+                        <li class="child-menu"><a href="index.html">Home <i class="fa fa-angle-right"></i></a>
+                            
+                        </li>
+  
+                        <li class="child-menu"><a href="#">Portfolio <i class="fa fa-angle-right"></i></a>
+                            <div class="sub-menu-wrapper">
+                                <ul class="sub-menu center-content">
+                                        <li><a href="https://spacefacemusic.com/" target="blank">Web Design | Spaceface</a></li>
+                                        <li><a href="WW.html">Graphic Design | Wealthy West</a></li>
+                                        <li><a href="todo.html">Application | To Do List </a></li>
+                                        <li><a href="charactersheet.html">Application | To Do List </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        
+                        
+                    </ul>
+                    
+                    <div class="margin-block"></div>
+                    <div class="margin-block"></div>
+  
+                    <div class="menu-social">
+                        <ul class="list-inline text-center">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
+                    </div><!-- end menu -->
+                </nav><!-- end nav-menu -->
+            </div><!-- end vertical-header-wrapper -->
+        </header><!-- end header -->
+    </div><!-- end menu-wrapper -->
+  
+  <!--Begin Recipes-->
+  <div id="wrapper">
+      <container>
+        <div class="row">
+            <div class="col-xs-1"></div>
+            <div class="col-xs-10">
+                <center><h1>Recipe Finder</h1></center>
+                <p>I'm looking for...</p>
+                <select id="mood" class="form-control" >
+                    <option selected></option>
+                    <option>Breakfast</option>
+                    <option>Lunch</option>
+                    <option>Dinner</option>
+                    <option>Dessert</option>
+                    <option>Cocktails</option>
+                </select>
+                <div id="breakfast_div">
+                    <br>
+                    <p>I want to spend...</p>
+                    <select id="breakfast_style" class="form-control" >
+                        <option selected></option>
+                        <option>30 Minutes or Less</option>
+                        <option>Let's Take Our Time</option>
+                    </select>
+                </div>
+                <div id="lunch_div">
+                    <br>
+                    <p>I'm in the mood for something...</p>
+                    <select id="lunch_style" class="form-control" >
+                        <option selected></option>
+                        <option>Fancy</option>
+                        <option>Simple</option>
+                    </select>
+                </div>
+                <div id="dinner_div">
+                    <br>
+                    <p>I'm in the mood for...</p>
+                    <select id="dinner_main" class="form-control" >
+                        <option selected></option>
+                        <option>Vegetarian</option>
+                        <option>Poultry & Pork</option>
+                        <option>Red Meat</option>
+                        <option>Seafood</option>
+                    </select>
+                </div>
+                <div id="cocktail_div">
+                    <br>
+                    <p>Let's use...</p>
+                    <select id="cocktail_main" class="form-control" >
+                        <option selected></option>
+                        <option>Bourbon or Whiskey</option>
+                        <option>Rum</option>
+                        <option>Tequila</option>
+                        <option>Vodka</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <br><br>
+                <table id="breakfast_table">
+                    <!-- Avocado Toast -->
+                    <tr class="simple">
+                        <td>
+                            <a class="name" href="https://www.foodnetwork.com/recipes/food-network-kitchen/avocado-toasts-3364588" target="blank">Avocado Toast</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/avocado_toast.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>Level: Easy</p>
+                                <p>Total Time: 10 minutes</p>
+                                <p><u>Main Ingredients</u>
+                                    <ul style="list-style-type:none;">
+                                        <li>Avocado, Whole-Wheat Bread, Garlic, Red Pepper, Salt, Black Pepper</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Breakfast Burrito -->
+                    <tr class="fancy">
+                        <td>
+                            <a class="name" href="https://www.foodnetwork.com/recipes/food-network-kitchen/breakfast-burritos-with-chorizo-3677254" target="blank">Breakfast Burrito</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/breakfast_burrito.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>Level: Easy</p>
+                                <p>Total Time: 40 minutes</p>
+                                <p><u>Main Ingredients</u>
+                                    <ul style="list-style-type:none;">
+                                        <li>Tomatillos, Jalapeno, Onion, Lime, Cilantro, Chorizo, Potatoes, Eggs, Beans, Tortillas, Mozzarella Cheese</li>
+                                        
+                                    </ul>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- French Toast -->
+                    <tr class="simple">
+                        <td>
+                            <a class="name" href="https://www.foodnetwork.com/recipes/robert-irvine/french-toast-recipe-1951408" target="blank">French Toast</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/french_toast.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>Level: Easy</p>
+                                <p>Total Time: 30 minutes</p>
+                                <p><u>Main Ingredients</u>
+                                    <ul style="list-style-type:none;">
+                                        <li>Cinnamon, Nutmeg, Sugar, Butter, Eggs, Milk, Vanilla Extract, Artisan Bread, Maple Syrup</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Shakshuka -->
+                    <tr class="fancy">
+                        <td>
+                            <a class="name" href="https://www.foodnetwork.com/recipes/food-network-kitchen/shakshuka-4621432" target="blank">Shakshuka</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/shakshuka.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>Level: Easy</p>
+                                <p>Total Time: 1 hour</p>
+                                <p><u>Main Ingredients</u>
+                                    <ul style="list-style-type:none;">
+                                        <li>Onion, Red Bell Pepper, Cilantro, Garlic, Cumin, Paprika, Red Pepper Flakes, Salt, Pepper, Tomatoes, Eggs, Pita Bread</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Bacon Lattice -->
+                    <tr class="fancy">
+                        <td>
+                            <a class="name" href="https://www.foodnetwork.com/recipes/food-network-kitchen/bacon-lattice-breakfast-pie-4623323" target="blank">Bacon Breakfast Pie</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/bacon_lattice.jpeg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>Level: Easy</p>
+                                <p>Total Time: 1 hour</p>
+                                <p><u>Main Ingredients</u>
+                                    <ul style="list-style-type:none;">
+                                        <li>Bacon, Puff Pastry, Eggs, Half & Half, Pepper Jack Cheese, Salt and Pepper</li>
+                                    </ul>
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table id="cocktail_table">
+                    <!-- Anne Bonny's Delight -->
+                    <tr class="rum">
+                        <td>
+                            <a class="name" target="blank">Anne Bonny's Delight</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/annebonny.jpg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>1oz Clear Rum</p>
+                                <p>.75oz Lime</p>
+                                <p>.75oz Cucumber Mint Syrup</p>
+                                <p>.5oz Velvet Falernum</p>
+                                <hr>
+                                <p>Top with Soda</p>
+                                <p>Garnish with Lime & Mint</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Aperol Paloma -->
+                    <tr class="tequila">
+                        <td>
+                            <a class="name" target="blank">Aperol Paloma</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/aperolpaloma.jpg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>1oz Tequila</p>
+                                <p>1oz Aperol</p>
+                                <p>1oz Lime Juice</p>
+                                <p>.5oz Simple Syrup</p>
+                                <hr>
+                                <p>Combine Ingredients</p>
+                                <p>Shake, Strain, & Serve</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Black Manhattan -->
+                    <tr class="whiskey">
+                        <td>
+                            <a class="name" target="blank">Black Manhattan</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/blackmanhattan.jpg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>2oz Rye</p>
+                                <p>1oz Averna Amaro</p>
+                                <p>2 dashes Angostura Bitters</p>
+                                <hr>
+                                <p>Combine Ingredients Over Ice</p>
+                                <p>Stir, Strain, & Serve</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Daiquiri -->
+                    <tr class="rum">
+                        <td>
+                            <a class="name" target="blank">Daiquiri</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/daquiri.jpg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>2oz Clear Rum</p>
+                                <p>1oz Lime Juice</p>
+                                <p>.5oz Simple Syrup</p>
+                                <hr>
+                                <p>Combine Ingredients Over Ice</p>
+                                <p>Shake, Strain, & Serve</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Firing Squad -->
+                    <tr class="tequila">
+                        <td>
+                            <a class="name" target="blank">Firing Squad</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/firingsquad.jpg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>2oz Silver Tequila</p>
+                                <p>1oz Lime Juice</p>
+                                <p>.75oz Grenadine</p>
+                                <p>5 Dashes of Angostura Bitters</p>
+                                <hr>
+                                <p>Combine Ingredients</p>
+                                <p>Shake, Strain, & Serve</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Sazerac -->
+                    <tr class="whiskey">
+                        <td>
+                            <a class="name" target="blank">Sazerac</a>
+                        </td>
+                        <td>
+                            <img class="image_class"src="images/sazerac.jpg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>2oz Rye</p>
+                                <p>.25oz Simple Syrup</p>
+                                <p>3 Dashes of Peychaud's Bitters</p>
+                                <p>Absinthe Rinse</p>
+                                <hr>
+                                <p>Combine Ingredients</p>
+                                <p>Stir & Strain into <br> Absinthe-Rinsed Glass</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Sunny Observation -->
+                    <tr class="vodka">
+                        <td>
+                            <a class="name" target="blank">Sunny Observation</a>
+                        </td>
+                        <td>
+                            <img class="image_class" src="images/sunnyobservation.jpg" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>1oz Vodka</p>
+                                <p>1oz Lemon</p>
+                                <p>1oz Blueberry/Strawberry Syrup</p>
+                                <hr>
+                                <p>Combine Ingredients</p>
+                                <p>Stir & Strain</p>
+                                <p>Top with Prosecco</p>
+                                <p>Garnish with Lemon Peel</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Sunny Observation -->
+                    <tr class="other">
+                        <td>
+                            <a class="name" target="blank">Simple Pop</a>
+                        </td>
+                        <td>
+                            <img class="image_class" src="images/simplepop.png" alt="">
+                        </td>
+                        <td>
+                            <div class="description">
+                                <p>1oz Campari</p>
+                                <p>1oz Dolin Blanc Vermouth</p>
+                                <p>1oz Fino Sherry</p>
+                                <p>1oz Orange Juice</p>
+                                <hr>
+                                <p>Combine Ingredients</p>
+                                <p>Stir & Strain</p>
+                                <p>Garnish with Thyme</p>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-xs-1"></div>
+        </div>
+      </container>
+  </div>
+  
+  
+  </body>
+  </html>
+  
+  
+  <script>
+    // Hide Future Selects
+    function hideAll(){
+        $("#cocktail_div").hide();
+        $("#cocktail_table").hide();
+        $("#dessert_div").hide();
+        $("#dinner_div").hide();
+        $("#lunch_div").hide();
+        $("#breakfast_div").hide();
+        $("#breakfast_table").hide();
+        $(".simple").hide();
+        $(".fancy").hide();
+
+    }
+    
+    hideAll();
+
+    // Mood Select
+    $("#mood").change(function() {
+        $("#second_step").show();
+        var mood = $(this).children("option:selected").val();
+        if(mood == 'Breakfast'){
+            breakfastSelected();
+        } else if (mood == 'Lunch'){
+            lunchSelected();
+        } else if (mood == 'Dinner'){
+            dinnerSelected();
+        } else if (mood == 'Dessert'){
+            dessertSelected();
+        } else if (mood == 'Cocktails'){
+            cocktailSelected();
+        }
+    });
+
+    function breakfastSelected(){
+        hideAll();
+        $("#breakfast_div").show();
+    }
+    function lunchSelected(){
+        hideAll();
+        $("#lunch_div").show();
+    }
+    function dinnerSelected(){
+        hideAll();
+        $("#dinner_div").show();
+    }
+    function dessertSelected(){
+        hideAll();
+        $("#dessert_div").show();
+    }
+    function cocktailSelected(){
+        hideAll();
+        $("#cocktail_div").show();
+    }
+
+    $("#breakfast_style").change(function() {
+        var style = $(this).children("option:selected").val();
+        if(style == "Let's Take Our Time"){
+            $('#breakfast_table tr').each(function() {
+                if($(this).attr("class") == 'fancy'){
+                    $('.simple').hide();
+                    $(this).show();
+                };
+            });
+        } else if (style == "30 Minutes or Less"){
+            $('#breakfast_table tr').each(function() {
+                if($(this).attr("class") == 'simple'){
+                    $('.fancy').hide();
+                    $(this).show();
+                };
+            });
+        }
+        $("#breakfast_table").show();
+    });
+
+    $("#cocktail_main").change(function() {
+        var main = $(this).children("option:selected").val();
+        if(main == "Bourbon or Whiskey"){
+            $('#cocktail_table tr').each(function() {
+                if($(this).attr("class") == 'whiskey'){
+                    $('.rum').hide();
+                    $('.tequila').hide();
+                    $('.vodka').hide();
+                    $('.other').hide();
+                    $(this).show();
+                };
+            });
+        } else if (main == "Rum"){
+            $('#cocktail_table tr').each(function() {
+                if($(this).attr("class") == 'rum'){
+                    $('.whiskey').hide();
+                    $('.tequila').hide();
+                    $('.vodka').hide();
+                    $('.other').hide();
+                    $(this).show();
+                };
+            });
+        } else if (main == "Tequila"){
+            $('#cocktail_table tr').each(function() {
+                if($(this).attr("class") == 'tequila'){
+                    $('.whiskey').hide();
+                    $('.rum').hide();
+                    $('.vodka').hide();
+                    $('.other').hide();
+                    $(this).show();
+                };
+            });
+        } else if (main == "Vodka"){
+            $('#cocktail_table tr').each(function() {
+                if($(this).attr("class") == 'vodka'){
+                    $('.whiskey').hide();
+                    $('.rum').hide();
+                    $('.tequila').hide();
+                    $('.other').hide();
+                    $(this).show();
+                };
+            });
+        } else if (main == "Other"){
+            $('#cocktail_table tr').each(function() {
+                if($(this).attr("class") == 'other'){
+                    $('.whiskey').hide();
+                    $('.rum').hide();
+                    $('.tequila').hide();
+                    $('.vodka').hide();
+                    $(this).show();
+                };
+            });
+        }
+        $("#cocktail_table").show();
+    });
+  
+  </script>
+  
