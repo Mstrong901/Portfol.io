@@ -1,0 +1,245 @@
+<style>
+    .designs {
+        padding: 5px;
+        width: 432px;
+        height: 576px;
+    }
+
+    #BR1 {
+      position:absolute;
+      top:  416;
+      left: 167;
+      color: black;
+      font-size: large;
+    }
+    #BR2 {
+      position:absolute;
+      top:  416;
+      left: 196;
+      color: black;
+      font-size: large;
+    }
+
+    #BR3 {
+      position:absolute;
+      top:  416;
+      left: 225;
+      color: black;
+      font-size: large;
+    }
+
+    #MS1 {
+      position:absolute;
+      top:  210;
+      left: 160;
+      color: black;
+      font-size: large;
+    }
+    #MS2 {
+      position:absolute;
+      top:  210;
+      left: 196;
+      color: black;
+      font-size: large;
+    }
+
+    #MS3 {
+      position:absolute;
+      top:  210;
+      left: 234;
+      color: black;
+      font-size: large;
+    }
+
+    #AB1 {
+      position:absolute;
+      top:  141;
+      left: 351;
+      color: black;
+      font-size: large;
+    }
+    #AB2 {
+      position:absolute;
+      top:  141;
+      left: 376;
+      color: black;
+      font-size: large;
+    }
+
+    #AB3 {
+      position:absolute;
+      top:  141;
+      left: 401;
+      color: black;
+      font-size: large;
+    }
+
+    #AP1 {
+      position:absolute;
+      top:  420;
+      left: 306;
+      color: black;
+      font-size: large;
+    }
+    #AP2 {
+      position:absolute;
+      top:  420;
+      left: 337;
+      color: black;
+      font-size: large;
+    }
+
+    #AP3 {
+      position:absolute;
+      top:  420;
+      left: 366;
+      color: black;
+      font-size: large;
+    }
+    
+    </style>
+      
+      <!doctype html>
+      <!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+      <!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+      <head>
+      
+        <!-- Basic -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        
+        <!-- Mobile Meta -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <!-- Site Meta -->
+        <title>Matt Strong - Design</title>
+        <meta name="keywords" content="">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <!-- Site Icons -->
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+      
+      <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet"> 
+      
+      <!-- Custom & Default Styles -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/carousel.css">
+        <link rel="stylesheet" href="style.css">
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+      
+      <!--[if lt IE 9]>
+        <script src="js/vendor/html5shiv.min.js"></script>
+        <script src="js/vendor/respond.min.js"></script>
+      <![endif]-->
+      
+      </head>
+      <body class="left-menu">  
+      
+      <!--Begin Recipes-->
+      <div id="container">
+          <container>
+            <div class="row">
+                <div class="col-sm-12">
+                  <center>
+                    <img id="background" class="designs" src="images/BRPC.JPEG" alt="" usemap="#workmap">
+                    <map name="workmap">
+                      <area shape="rect"   coords="161,370,105,314"   id="quinlan"    >
+                      <area shape="rect"   coords="80,292,24,236"    id="strong"      >
+                      <area shape="rect"   coords="337,81,281,25"     id="mueller"    >
+                      <area shape="rect"   coords="386,471,330,415"   id="woods"      >
+                    </map>
+                    <div id="BR1">X</div>
+                    <div id="BR2">X</div>
+                    <div id="BR3">X</div>
+                    <div id="MS1">X</div>
+                    <div id="MS2">X</div>
+                    <div id="MS3">X</div>
+                    <div id="AB1">X</div>
+                    <div id="AB2">X</div>
+                    <div id="AB3">X</div>
+                    <div id="AP1">X</div>
+                    <div id="AP2">X</div>
+                    <div id="AP3">X</div>
+
+                  </center>
+                </div>
+            </div>
+          </container>
+      </div>
+      </body>
+      </html>
+      <script>
+        var qCount = 0;
+        var sCount = 0;
+        var mCount = 0;
+        var wCount = 0;
+        $("#BR1").hide();
+        $("#BR2").hide();
+        $("#BR3").hide();
+        $("#MS1").hide();
+        $("#MS2").hide();
+        $("#MS3").hide();
+        $("#AB1").hide();
+        $("#AB2").hide();
+        $("#AB3").hide();
+        $("#AP1").hide();
+        $("#AP2").hide();
+        $("#AP3").hide();
+
+          $("#quinlan").click(function(){
+            if(qCount == 0){
+              //add 1st beer
+              $("#BR1").show();
+              qCount = 1;
+            } else if (qCount == 1){
+              //add 2nd beer
+              $("#BR2").show();
+              qCount = 2;
+            } else {
+              //add 3rd beer
+              $("#BR3").show();
+            }
+          });
+          $("#strong").click(function(){
+            if(sCount == 0){
+              //add 1st beer
+
+            } else if (sCount == 1){
+              //add 2nd beer
+              
+            } else {
+              //add 3rd beer
+            }
+          });
+          $("#mueller").click(function(){
+            if(mCount == 0){
+              //add 1st beer
+
+            } else if (mCount == 1){
+              //add 2nd beer
+              
+            } else {
+              //add 3rd beer
+            }
+          });
+          $("#woods").click(function(){
+            if(wCount == 0){
+              //add 1st beer
+
+            } else if (wCount == 1){
+              //add 2nd beer
+              
+            } else {
+              //add 3rd beer
+            }
+          });
+      </script>
+      
+    
