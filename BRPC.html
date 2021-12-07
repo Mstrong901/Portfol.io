@@ -31,14 +31,14 @@
     #MS1 {
       position:absolute;
       top:  210;
-      left: 160;
+      left: 108;
       color: black;
       font-size: large;
     }
     #MS2 {
       position:absolute;
       top:  210;
-      left: 196;
+      left: 143;
       color: black;
       font-size: large;
     }
@@ -46,7 +46,7 @@
     #MS3 {
       position:absolute;
       top:  210;
-      left: 234;
+      left: 180;
       color: black;
       font-size: large;
     }
@@ -54,14 +54,14 @@
     #AB1 {
       position:absolute;
       top:  141;
-      left: 351;
+      left: 298;
       color: black;
       font-size: large;
     }
     #AB2 {
       position:absolute;
       top:  141;
-      left: 376;
+      left: 323;
       color: black;
       font-size: large;
     }
@@ -69,7 +69,7 @@
     #AB3 {
       position:absolute;
       top:  141;
-      left: 401;
+      left: 348;
       color: black;
       font-size: large;
     }
@@ -77,14 +77,14 @@
     #AP1 {
       position:absolute;
       top:  420;
-      left: 306;
+      left: 253;
       color: black;
       font-size: large;
     }
     #AP2 {
       position:absolute;
       top:  420;
-      left: 337;
+      left: 284;
       color: black;
       font-size: large;
     }
@@ -92,7 +92,7 @@
     #AP3 {
       position:absolute;
       top:  420;
-      left: 366;
+      left: 313;
       color: black;
       font-size: large;
     }
@@ -210,34 +210,43 @@
           $("#strong").click(function(){
             if(sCount == 0){
               //add 1st beer
-
+              $("#MS1").show();
+              sCount = 1;
             } else if (sCount == 1){
               //add 2nd beer
-              
+              $("#MS2").show();
+              sCount = 2;
             } else {
               //add 3rd beer
+              $("#MS3").show();
             }
           });
           $("#mueller").click(function(){
             if(mCount == 0){
               //add 1st beer
-
+              $("#AB1").show();
+              mCount = 1;
             } else if (mCount == 1){
               //add 2nd beer
-              
+              $("#AB2").show();
+              mCount = 2;
             } else {
               //add 3rd beer
+              $("#AB3").show();
             }
           });
           $("#woods").click(function(){
             if(wCount == 0){
               //add 1st beer
-
+              $("#AP1").show();
+              wCount = 1;
             } else if (wCount == 1){
               //add 2nd beer
-              
+              $("#AP2").show();
+              wCount = 2;
             } else {
               //add 3rd beer
+              $("#AP3").show();
             }
           });
       </script>
